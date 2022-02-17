@@ -9,6 +9,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Enumerated;
 
 @Entity
 @Data
@@ -31,6 +32,6 @@ public class Book {
     @Column
     String author;
 
-    @Column
+    @Enumerated
     Genre genre;
 }
