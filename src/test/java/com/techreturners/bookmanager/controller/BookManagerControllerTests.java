@@ -73,7 +73,7 @@ public class BookManagerControllerTests {
 
         this.mockMvcController.perform(
                         MockMvcRequestBuilders.get("/api/v1/book/" + book.getId()))
-                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(MockMvcResultMatchers.status().isFound())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.id").value(4))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.title").value("Book Four"));
     }
